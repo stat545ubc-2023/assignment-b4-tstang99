@@ -1,0 +1,27 @@
+---
+title: "Exercise"
+output: github_document
+date: "2023-12-02"
+---
+
+```{r setup, include=FALSE}
+library(janeaustenr)
+library(tidytext)
+library(tidyverse)
+library(ggplot2)
+library(datateachr)
+library(stringr)
+library(devtools)
+```
+
+#Exercise 1:
+```{r}
+df <- tibble(txt = emma)
+df <- df %>% 
+  unnest_tokens(word, txt) %>%
+  filter(!word %in% stop_words$word) %>%
+  count(word, sort = TRUE)
+df
+plot_df <- head(df,10)
+ggplot(plot_df, aes(word, n)) + geom_col() + labs(x = "Word", y = "Count ", title = "Top 10 Most Frequent Words In Emma")
+```
