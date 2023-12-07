@@ -8,10 +8,12 @@ In this exercise I plot the top 10 most frequent words in Emma. There will be tw
 
 # Exercise 2
 
-In this exercise I created a package which contains my own version of Pig Latin where it moves the last letter to front and add ya at the end.
+In this exercise I created a package which contains my own version of Pig Latin where it removes the first/first group of vowel and move the first/first group of consonant to the end and add xy to it after.
+
+# README file
+A file the introduces this repository. 
 
 # How to access this repo
-You can access this repository by clone the repo, then open the project in R-studio. 
+You can access this repository by clone the repository, then open the Rmd files in R-studio to edit. 
 
-# Requirement
-it requires the following packages: janeaustenr, tidytext, tidyverse, ggplot2, datateachr, stringr and devtools.
+
